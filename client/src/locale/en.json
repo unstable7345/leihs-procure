@@ -89,7 +89,8 @@
     "create_request_for_subcat": "Create request for this sub-category",
     "refresh_data": "Refresh data",
     "close_export_view": "Close export view",
-    "export_preview": "Preview:"
+    "export_preview": "Preview:",
+    "export": "Export"
   },
   "request_form_field": {
     "article_name": "Item or Project",

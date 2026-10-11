@@ -89,7 +89,8 @@
     "create_request_for_subcat": "Crear una solicitud para esta subcategoría",
     "refresh_data": "Actualizar datos",
     "close_export_view": "Cerrar la vista de exportación",
-    "export_preview": "Vista previa:"
+    "export_preview": "Vista previa:",
+    "export": "Exportar"
   },
   "request_form_field": {
     "article_name": "Artículo o proyecto",

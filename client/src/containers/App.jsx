@@ -56,6 +56,7 @@ function App({ children, isDev }) {
           const userLocale = getUserLocale(data)
           // XXX global variable for lang - should use props or context
           if (window && userLocale) window.setLang(userLocale)
+          if (typeof document !== 'undefined') document.title = `leihs | ${t('app_title')}`
 
           return (
             <>

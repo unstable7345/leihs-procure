@@ -82,7 +82,7 @@ class RequestsDashboard extends React.Component {
               active={state.exportView}
               onClick={e => this.setState(s => ({ exportView: !s.exportView }))}
             >
-              <Icon.Table /> {'Export'}
+              <Icon.Table /> {t('dashboard.export')}
             </Button>
 
             <Button
