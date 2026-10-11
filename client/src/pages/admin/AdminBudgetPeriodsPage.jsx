@@ -103,7 +103,7 @@ function AdminBudgetPeriodsPage() {
 
             return (
               <MainWithSidebar>
-                <h1 className="h2">Budgetperioden</h1>
+                <h1 className="h2">{t('admin.budget_periods.title')}</h1>
                 <BudgetPeriodsTable
                   budgetPeriods={budgetPeriods}
                   updateAction={fields => {
@@ -140,10 +140,10 @@ const BudgetPeriodsTable = ({ budgetPeriods, updateAction }) => {
             <table className="table">
               <thead>
                 <tr>
-                  <th>Name</th>
-                  <th>Startdatum der Prüfphase</th>
-                  <th>Enddatum der Budgetperiode</th>
-                  <th>Total Anträge</th>
+                  <th>{t('admin.budget_periods.name')}</th>
+                  <th>{t('admin.budget_periods.inspection_start_date')}</th>
+                  <th>{t('admin.budget_periods.end_date_bp')}</th>
+                  <th>{t('admin.budget_periods.total_requests')}</th>
                 </tr>
               </thead>
               <tbody>
@@ -164,15 +164,15 @@ const BudgetPeriodsTable = ({ budgetPeriods, updateAction }) => {
                       <td>
                         <FormField
                           required
-                          label="Name"
-                          placeholder="Name"
+                          label={t('admin.budget_periods.name')}
+                          placeholder={t('admin.budget_periods.name')}
                           hideLabel
                           readOnly={toDelete}
                           {...formPropsFor(`${n}.name`)}
                         />
                       </td>
                       <td>
-                        <FormGroup label="Startdatum der Prüfphase" hideLabel>
+                        <FormGroup label={t('admin.budget_periods.inspection_start_date')} hideLabel>
                           <InputDate
                             readOnly={toDelete}
                             {...formPropsFor(`${n}.inspection_start_date`)}
@@ -180,7 +180,7 @@ const BudgetPeriodsTable = ({ budgetPeriods, updateAction }) => {
                         </FormGroup>
                       </td>
                       <td>
-                        <FormGroup label="Enddatum" hideLabel>
+                        <FormGroup label={t('admin.budget_periods.end_date')} hideLabel>
                           <InputDate
                             readOnly={toDelete}
                             className={cx({ 'text-strike ': toDelete })}
@@ -192,7 +192,7 @@ const BudgetPeriodsTable = ({ budgetPeriods, updateAction }) => {
                         {!canDelete ? (
                           <React.Fragment>
                             <Tooltipped
-                              text={'Total aller Anträge mit Status "Neu"'}
+                              text={t('admin.budget_periods.total_new')}
                             >
                               <Badge info id={`badge_new_${n}`}>
                                 <Icon.ShoppingCart />{' '}
@@ -205,7 +205,7 @@ const BudgetPeriodsTable = ({ budgetPeriods, updateAction }) => {
                             </Tooltipped>{' '}
                             <Tooltipped
                               text={
-                                'Total aller (teilweise und vollständig) angenommenen Anträge'
+                                t('admin.budget_periods.total_accepted')
                               }
                             >
                               <Badge success id={`badge_inspecten_${n}`}>
@@ -246,7 +246,7 @@ const BudgetPeriodsTable = ({ budgetPeriods, updateAction }) => {
               <tfoot>
                 <tr>
                   <td colSpan="5">
-                    <Tooltipped text="Neue Budgetperiode erstellen">
+                    <Tooltipped text={t('admin.budget_periods.add')}>
                       <Button color="link" id="add_bp_btn" onClick={onAddRow}>
                         <Icon.PlusCircle color="success" size="2x" />
                       </Button>

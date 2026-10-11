@@ -15,7 +15,9 @@
     "confirm_move_category": "In andere Kategorie verschieben?",
     "confirm_delete": "Antrag löschen?",
     "give_reason_when_partially_accepting_or_denying": "Bei Ablehnung oder Teilbewilligung muss ein Inspektionskommentar vorhanden sein",
-    "link_to_request": "Link zum Antrag"
+    "link_to_request": "Link zum Antrag",
+    "price_integer_help": "Bitte nur ganze Zahlen eingeben",
+    "insert_comment_template": "- Textvorlage einfügen -"
   },
   "multiselect": {
     "select_all": "Alle auswählen",
@@ -84,7 +86,10 @@
     "subcat_total_sum": "Aktuelles Total dieser Kategorie",
     "create_request_for_bp": "Antrag für diese Budgetperiode erfassen",
     "create_request_for_maincat": "Antrag für diese Haupkategorie erfassen",
-    "create_request_for_subcat": "Antrag für diese Kategorie erfassen"
+    "create_request_for_subcat": "Antrag für diese Kategorie erfassen",
+    "refresh_data": "Daten aktualisieren",
+    "close_export_view": "Exportansicht schliessen",
+    "export_preview": "Vorschau:"
   },
   "request_form_field": {
     "article_name": "Artikel oder Projekt",
@@ -190,7 +195,30 @@
         "cost_center": "Kostenstelle",
         "general_ledger_account": "Sachkonto ⅠI (IR)",
         "procurement_account": "Sachkonto I (ER)"
-      }
+      },
+      "name": "Name",
+      "new_image": "Neues Kategoriebild auswählen",
+      "category_name": "Kategoriename",
+      "add_main_category": "Neue Hauptkategorie hinzufügen"
+    },
+    "settings": {
+      "title": "Einstellungen",
+      "contact_url": "Kontakt-URL",
+      "inspection_comments": "Textvorlagen für Prüfer-Kommentare (eine pro Zeile)"
+    },
+    "orgs": {
+      "title": "Organisationen der Antragsteller"
+    },
+    "budget_periods": {
+      "title": "Budgetperioden",
+      "name": "Name",
+      "inspection_start_date": "Startdatum der Prüfphase",
+      "end_date_bp": "Enddatum der Budgetperiode",
+      "end_date": "Enddatum",
+      "total_requests": "Total Anträge",
+      "total_new": "Total aller Anträge mit Status \"Neu\"",
+      "total_accepted": "Total aller (teilweise und vollständig) angenommenen Anträge",
+      "add": "Neue Budgetperiode erstellen"
     }
   },
   "ui": {
@@ -200,7 +228,9 @@
     },
     "InlineSearch": {
       "placeholder": "Suchen",
-      "clear_label": "Suche zurücksetzen"
+      "clear_label": "Suche zurücksetzen",
+      "loading": "Laden…",
+      "no_results": "Keine Resultate!"
     }
   },
   "errors": {
@@ -219,5 +249,50 @@
     "msg_unauthorized_2c": " anzumelden.",
     "msg_error_ofcode_1": "Entschuldigung, es ist ein Fehler vom Typ ",
     "msg_error_ofcode_2": " aufgetreten."
+  },
+  "export": {
+    "short_id": "Nummer",
+    "budget_period": "Budgetperiode",
+    "main_category": "Hauptkategorie",
+    "subcategory": "Subkategorie",
+    "user": "Antragsteller/in",
+    "department": "Departement",
+    "organization": "Organisation",
+    "article_name": "Artikel oder Projekt",
+    "article_number": "Artikelnr. oder Herstellernr.",
+    "supplier": "Lieferant",
+    "requested_quantity": "Menge beantragt",
+    "approved_quantity": "Menge bewilligt",
+    "order_quantity": "Bestellmenge",
+    "price": "Preis inkl. MwSt",
+    "total_price": "Total inkl. MwSt",
+    "state": "Status",
+    "priority": "Priorität",
+    "inspector_priority": "Priorität des Prüfers",
+    "replacement": "Ersatz / Neu",
+    "receiver": "Empfänger/in",
+    "building": "Gebäude",
+    "room": "Raum",
+    "motivation": "Begründung",
+    "inspection_comment": "Kommentar des Prüfers",
+    "cost_center": "Kostenstelle",
+    "general_ledger_account": "Sachkonto",
+    "procurement_account": "Beschaffungskonto",
+    "internal_order_number": "Innenauftrag",
+    "order_status": "Beschaffungs-Status",
+    "order_comment": "Beschaffungs-Kommentar",
+    "url": "Link"
+  },
+  "form_filepicker_label_attachments": "Anhänge auswählen",
+  "request_new": {
+    "title": "Antrag erstellen",
+    "budget_period": "Budgetperiode",
+    "please_choose": "Bitte wählen",
+    "category_and_template": "Kategorie & Vorlage",
+    "no_template": "Keine Vorlage",
+    "success": "Antrag wurde erfolgreich erstellt",
+    "create_without_template": "Ohne Vorlage erstellen",
+    "inspecting_until": "Prüfungsphase bis",
+    "requesting_until": "Antragsphase bis"
   }
 }

@@ -89,7 +89,7 @@ class RequestsDashboard extends React.Component {
               size="sm"
               cls="mr-1 mb-1"
               outline
-              title="refresh data"
+              title={t('dashboard.refresh_data')}
               onClick={refetchAllData}
             >
               <Icon.Reload spin={requestsQuery.loading} />
@@ -127,14 +127,14 @@ class RequestsDashboard extends React.Component {
                   outline
                   onClick={e => this.setState(s => ({ exportView: false }))}
                 >
-                  Exportansicht schliessen
+                  {t('dashboard.close_export_view')}
                 </Button>
                 {/* </ButtonGroup> */}
                 {/* <ButtonGroup className="col-auto ml-auto pt-3">
                 </ButtonGroup> */}
               </ButtonToolbar>
 
-              <h2 className="h5">Vorschau:</h2>
+              <h2 className="h5">{t('dashboard.export_preview')}</h2>
               {<RequestTable table={table} query={requestsQuery} />}
             </div>
           )}

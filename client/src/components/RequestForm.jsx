@@ -345,7 +345,7 @@ class RequestForm extends React.Component {
                               labelSmall={t('request_form_field.price_help')}
                               helpText={
                                 !priceField.readOnly &&
-                                'Bitte nur ganze Zahlen eingeben'
+                                t('request.price_integer_help')
                               }
                             >
                               {priceField.readOnly ? (
@@ -469,7 +469,7 @@ class RequestForm extends React.Component {
                               <Select
                                 m="t-3"
                                 cls="form-control-sm"
-                                emptyOption="- Textvorlage einfügen -"
+                                emptyOption={t('request.insert_comment_template')}
                                 options={f.map(inspectionComments, s => ({
                                   value: s,
                                   label: s

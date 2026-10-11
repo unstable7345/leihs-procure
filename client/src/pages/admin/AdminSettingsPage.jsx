@@ -92,7 +92,7 @@ function AdminSettingsPage() {
 
             return (
               <MainWithSidebar>
-                <h1 className="h2">Einstellungen</h1>
+                <h1 className="h2">{t('admin.settings.title')}</h1>
                 <SettingsTable
                   settings={settings}
                   updateAction={fields =>
@@ -119,10 +119,10 @@ const SettingsTable = ({ settings, updateAction }) => (
       return (
         <React.Fragment>
           <form>
-            <FormField label="contact_url" {...formPropsFor('contact_url')} />
+            <FormField label={t('admin.settings.contact_url')} {...formPropsFor('contact_url')} />
             <FormField
               type="textarea"
-              label="inspection_comments"
+              label={t('admin.settings.inspection_comments')}
               {...formPropsFor('inspection_comments')}
             />
           </form>

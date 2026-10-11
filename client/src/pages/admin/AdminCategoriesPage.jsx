@@ -330,7 +330,7 @@ class CategoryCard extends React.Component {
                 <div className="card mb-3" id={`mc${id}`}>
                   <div className="card-body">
                     <FormField
-                      label="Name"
+                      label={t('admin.categories.name')}
                       className="f3 py-4 font-weight-bold"
                       required
                       {...formPropsFor('name')}
@@ -349,7 +349,7 @@ class CategoryCard extends React.Component {
                         )}
                         <InputFileUpload
                           multiple={false}
-                          label="Neues Kategoriebild auswählen"
+                          label={t('admin.categories.new_image')}
                           {...formPropsFor('new_image_url')}
                         />
                       </Col>
@@ -369,7 +369,7 @@ class CategoryCard extends React.Component {
                               className={cx('font-weight-bold', {
                                 'text-danger text-strike': cat.toDelete
                               })}
-                              label="category name"
+                              label={t('admin.categories.category_name')}
                               hideLabel={true}
                               required
                               {...formPropsFor(`categories.${i}.name`)}
@@ -565,7 +565,7 @@ const TableOfContents = ({ categories, baseUrl, withSubcats = false }) => (
         )}
       >
         <Icon.PlusCircle color="success" size="2x" />
-        <span className="sr-only">Neue Hauptkategorie hinzufügen</span>
+        <span className="sr-only">{t('admin.categories.add_main_category')}</span>
       </NavLink>
     </li>
   </ul>

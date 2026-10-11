@@ -1,6 +1,7 @@
 import React from 'react'
 // import cx from 'classnames'
 import f from 'lodash'
+import t from '../../locale/translate'
 
 import { Query } from '@apollo/client/react/components'
 import gql from 'graphql-tag'
@@ -62,7 +63,7 @@ const AdminOrgsPage = () => (
 
       return (
         <MainWithSidebar>
-          <h1 className="h2">Organisationen der Antragsteller</h1>
+          <h1 className="h2">{t('admin.orgs.title')}</h1>
           <ul className="list-unstyled mt-2">
             {departmentsOrgs.map(dep => (
               <li key={dep.id}>

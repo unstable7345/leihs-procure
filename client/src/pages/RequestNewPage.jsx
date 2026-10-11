@@ -8,7 +8,7 @@ import { useMutation, useQuery } from '@apollo/client'
 
 // import * as CONSTANTS from '../constants'
 import * as Fragments from '../graphql-fragments'
-// import t from '../locale/translate'
+import t from '../locale/translate'
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import Icon from '../components/Icons'
 import {
@@ -148,7 +148,7 @@ function RequestNewPage() {
     <CurrentUser>
       {me => (
         <MainWithSidebar>
-          <h1>Antrag erstellen</h1>
+          <h1>{t('request_new.title')}</h1>
 
           <NewRequestPreselection
             key={location.key} // reset state on location change!
@@ -231,8 +231,8 @@ class NewRequestPreselection extends React.Component {
             budgetPeriods
           ).map(bp => {
             const labelPost = bp.isInspecting
-              ? `Prüfungsphase bis ${fmtDate(bp.end_date)}`
-              : `Antragsphase bis ${fmtDate(bp.inspection_start_date)}`
+              ? `${t('request_new.inspecting_until')} ${fmtDate(bp.end_date)}`
+              : `${t('request_new.requesting_until')} ${fmtDate(bp.inspection_start_date)}`
             return {
               value: bp.id,
               label: `${bp.name} – ${labelPost}`
@@ -264,7 +264,7 @@ class NewRequestPreselection extends React.Component {
             <F>
               <form className={cx({ 'was-validated': showValidations })}>
                 <FormGroupStrap>
-                  <Label for="budgetPeriodSelect">Budgetperiode</Label>
+                  <Label for="budgetPeriodSelect">{t('request_new.budget_period')}</Label>
                   <Input
                     required
                     id="budgetPeriodSelect"
@@ -275,7 +275,7 @@ class NewRequestPreselection extends React.Component {
                       setSelection({ budgetPeriod: e.target.value })
                     }
                   >
-                    <option value="">Bitte wählen</option>
+                    <option value="">{t('request_new.please_choose')}</option>
                     {shownBudgetPeriods.map(({ value, label }) => (
                       <option key={value} value={value}>
                         {label}
@@ -293,7 +293,7 @@ class NewRequestPreselection extends React.Component {
                 </FormGroup> */}
                 {selectedBudgetPeriod && (
                   <FormGroup
-                    label="Kategorie & Vorlage"
+                    label={t('request_new.category_and_template')}
                     className="form-group-lg"
                   >
                     <Row cls="mb-3">
@@ -334,7 +334,7 @@ class NewRequestPreselection extends React.Component {
                             <Col sm>
                               {hasPreselected &&
                                 (!tpl ? (
-                                  <SelectionCard>Keine Vorlage</SelectionCard>
+                                  <SelectionCard>{t('request_new.no_template')}</SelectionCard>
                                 ) : (
                                   <SelectionCard onRemoveClick={resetTemplate}>
                                     <Icon.Templates spaced />
@@ -408,7 +408,7 @@ function NewRequestForm({ budgetPeriod, template, category, onCancel }) {
         state: {
           flash: {
             level: 'success',
-            message: 'Antrag wurde erfolgreich erstellt'
+            message: t('request_new.success')
           }
         }
       })
@@ -544,7 +544,7 @@ const CategoryItemsList = ({ items, onSelectCategory, onSelectTemplate }) => {
                   ))}
 
                   <AddButtonLine onClick={e => onSelectCategory(sc)}>
-                    {'Ohne Vorlage erstellen'}
+                    {t('request_new.create_without_template')}
                   </AddButtonLine>
                 </div>
               </F>

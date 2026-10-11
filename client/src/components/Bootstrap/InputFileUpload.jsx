@@ -122,7 +122,7 @@ class InputFileUpload extends React.Component {
         className,
         inputProps,
         multiple,
-        label = 'Anhänge auswählen',
+        label = t('form_filepicker_label_attachments'),
         ...props
       }
     } = this

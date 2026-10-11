@@ -83,7 +83,7 @@ const InlineSearch = ({
             {({ loading, error, data }) => {
               if (!isOpen) return false
               log('query', { loading, error, data })
-              if (loading) return <EmptyResult>Loading...</EmptyResult>
+              if (loading) return <EmptyResult>{t('ui.InlineSearch.loading')}</EmptyResult>
               if (error) {
                 log(error)
                 const errMsg =
@@ -197,7 +197,7 @@ const ItemsList = ({
   return (
     <div {...resultsBoxVisualProps}>
       {f.isEmpty(items) ? (
-        <div {...resultsItemVisualProps}>No results!</div>
+        <div {...resultsItemVisualProps}>{t('ui.InlineSearch.no_results')}</div>
       ) : (
         items.map((item, index) => (
           <div

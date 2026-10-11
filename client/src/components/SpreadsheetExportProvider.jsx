@@ -42,102 +42,102 @@ const REQ_NUM_PREFIX = '#' // prevent Excel from auto-converting this field (int
 const spreadSheetCols = [
   {
     key: 'short_id',
-    label: 'Nummer',
+    label: t('export.short_id'),
     fn: (r) => REQ_NUM_PREFIX + f.get(r, 'short_id')
   },
   {
     key: 'budget_period',
-    label: 'Budgetperiode',
+    label: t('export.budget_period'),
     fn: (r) => f.get(r, 'budget_period.value.name')
   },
   {
     key: 'main_category',
-    label: 'Hauptkategorie',
+    label: t('export.main_category'),
     fn: (r) => f.get(r, 'category.value.main_category.name')
   },
   {
     key: 'category',
-    label: 'Subkategorie',
+    label: t('export.subcategory'),
     fn: (r) => f.get(r, 'category.value.name')
   },
-  { key: 'user', label: 'Antragsteller/in' },
+  { key: 'user', label: t('export.user') },
   {
     key: 'department',
-    label: 'Departement',
+    label: t('export.department'),
     fn: (r) => f.get(r, 'organization.value.department.name')
   },
   {
     key: 'organization',
-    label: 'Organisation',
+    label: t('export.organization'),
     fn: (r) => f.get(r, 'organization.value.name')
   },
-  { key: 'article_name', label: 'Artikel oder Projekt' },
+  { key: 'article_name', label: t('export.article_name') },
   {
     key: 'article_number',
-    label: 'Artikelnr. oder Herstellernr.'
+    label: t('export.article_number')
   },
   {
     key: 'supplier',
-    label: 'Lieferant',
+    label: t('export.supplier'),
     fn: (r) => f.get(r, 'supplier.value.id') || f.get(r, 'supplier_name.value')
   },
-  { key: 'requested_quantity', label: 'Menge beantragt' },
-  { key: 'approved_quantity', label: 'Menge bewilligt' },
-  { key: 'order_quantity', label: 'Bestellmenge' },
+  { key: 'requested_quantity', label: t('export.requested_quantity') },
+  { key: 'approved_quantity', label: t('export.approved_quantity') },
+  { key: 'order_quantity', label: t('export.order_quantity') },
   {
     key: 'price',
-    label: 'Preis inkl. MwSt',
+    label: t('export.price'),
     fn: (r) => (f.get(r, 'price_cents.value') || 0) / 100
   },
   {
     key: 'total_price',
-    label: 'Total inkl. MwSt',
+    label: t('export.total_price'),
     fn: (r) => f.try((_) => (RequestTotalAmount(r) || 0) / 100)
   },
   {
     key: 'state',
-    label: 'Status',
+    label: t('export.state'),
     fn: (r) => RequestFieldValue('state', r)
   },
   {
     key: 'priority',
-    label: 'Priorität',
+    label: t('export.priority'),
     fn: (r) => f.try((_) => RequestFieldValue('priority', r))
   },
   {
     key: 'inspector_priority',
-    label: 'Priorität des Prüfers',
+    label: t('export.inspector_priority'),
 
     fn: (r) => f.try((_) => RequestFieldValue('inspector_priority', r))
   },
   {
     key: 'Ersatz / Neu',
-    label: 'Ersatz / Neu',
+    label: t('export.replacement'),
     fn: (r) => f.try((_) => RequestFieldValue('replacement', r))
   },
-  { key: 'receiver', label: 'Receiver' },
+  { key: 'receiver', label: t('export.receiver') },
   {
     key: 'building',
-    label: 'Gebäude',
+    label: t('export.building'),
     fn: (r) => f.get(r, 'room.value.building.name')
   },
-  { key: 'room', label: 'Raum', fn: (r) => f.get(r, 'room.value.name') },
-  { key: 'motivation', label: 'Begründung' },
-  { key: 'inspection_comment', label: 'Kommentar des Prüfers' },
+  { key: 'room', label: t('export.room'), fn: (r) => f.get(r, 'room.value.name') },
+  { key: 'motivation', label: t('export.motivation') },
+  { key: 'inspection_comment', label: t('export.inspection_comment') },
   {
     key: 'accounting_type',
     label: t('request_form_field.accounting_type'),
     fn: (r) => RequestFieldValue('accounting_type', r)
   },
-  { key: 'cost_center', label: 'Kostenstelle' },
-  { key: 'general_ledger_account', label: 'Sachkonto' },
-  { key: 'procurement_account', label: 'Beschaffungskonto' },
-  { key: 'internal_order_number', label: 'Innenauftrag' },
-  { key: 'order_status', label: 'Beschaffungs-Status' },
-  { key: 'order_comment', label: 'Beschaffungs-Kommentar' },
+  { key: 'cost_center', label: t('export.cost_center') },
+  { key: 'general_ledger_account', label: t('export.general_ledger_account') },
+  { key: 'procurement_account', label: t('export.procurement_account') },
+  { key: 'internal_order_number', label: t('export.internal_order_number') },
+  { key: 'order_status', label: t('export.order_status') },
+  { key: 'order_comment', label: t('export.order_comment') },
   {
     key: 'url',
-    label: 'Link',
+    label: t('export.url'),
     fn: (r) => `https://leihs.example.com/procure/requests/${r.id}`
   }
 ]

@@ -15,7 +15,9 @@
     "confirm_move_category": "Move to another category?",
     "confirm_delete": "Delete Request?",
     "give_reason_when_partially_accepting_or_denying": "When rejecting or partially rejecting you need to provide an inspection comment",
-    "link_to_request": "Link to request"
+    "link_to_request": "Link to request",
+    "price_integer_help": "Please enter whole numbers only",
+    "insert_comment_template": "- Insert text template -"
   },
   "multiselect": {
     "select_all": "Select all",
@@ -84,7 +86,10 @@
     "subcat_total_sum": "Total of Sub-Category",
     "create_request_for_bp": "Create request for this budget period",
     "create_request_for_maincat": "Create request for this main category",
-    "create_request_for_subcat": "Create request for this sub-category"
+    "create_request_for_subcat": "Create request for this sub-category",
+    "refresh_data": "Refresh data",
+    "close_export_view": "Close export view",
+    "export_preview": "Preview:"
   },
   "request_form_field": {
     "article_name": "Item or Project",
@@ -190,7 +195,30 @@
         "cost_center": "Cost Center",
         "general_ledger_account": "G/L Account II (IR)",
         "procurement_account": "Procurement Account (ER)"
-      }
+      },
+      "name": "Name",
+      "new_image": "Select new category image",
+      "category_name": "Category name",
+      "add_main_category": "Add new main category"
+    },
+    "settings": {
+      "title": "Settings",
+      "contact_url": "Contact URL",
+      "inspection_comments": "Inspection comment templates (one per line)"
+    },
+    "orgs": {
+      "title": "Requesters' Organisations"
+    },
+    "budget_periods": {
+      "title": "Budget Periods",
+      "name": "Name",
+      "inspection_start_date": "Start date of the inspection phase",
+      "end_date_bp": "End date of the budget period",
+      "end_date": "End date",
+      "total_requests": "Total requests",
+      "total_new": "Total of all requests with status \"New\"",
+      "total_accepted": "Total of all (partially and fully) accepted requests",
+      "add": "Create new budget period"
     }
   },
   "ui": {
@@ -200,7 +228,9 @@
     },
     "InlineSearch": {
       "placeholder": "Search",
-      "clear_label": "Clear search"
+      "clear_label": "Clear search",
+      "loading": "Loading…",
+      "no_results": "No results!"
     }
   },
   "errors": {
@@ -219,5 +249,50 @@
     "msg_unauthorized_2c": " and maybe log in.",
     "msg_error_ofcode_1": "Sorry, there was an error of type ",
     "msg_error_ofcode_2": "."
+  },
+  "export": {
+    "short_id": "Number",
+    "budget_period": "Budget Period",
+    "main_category": "Main Category",
+    "subcategory": "Sub-Category",
+    "user": "Requester",
+    "department": "Department",
+    "organization": "Organisation",
+    "article_name": "Item or Project",
+    "article_number": "Item Nº or Supplier Nº",
+    "supplier": "Supplier",
+    "requested_quantity": "Amount requested",
+    "approved_quantity": "Amount accepted",
+    "order_quantity": "Order amount",
+    "price": "Price incl. VAT",
+    "total_price": "Total incl. VAT",
+    "state": "Status",
+    "priority": "Priority",
+    "inspector_priority": "Inspector's Priority",
+    "replacement": "Replacement / New",
+    "receiver": "Recipient",
+    "building": "Building",
+    "room": "Room",
+    "motivation": "Reason",
+    "inspection_comment": "Inspector's Comment",
+    "cost_center": "Cost Center",
+    "general_ledger_account": "G/L Account",
+    "procurement_account": "Procurement Account",
+    "internal_order_number": "Internal Order",
+    "order_status": "Procuring Status",
+    "order_comment": "Procuring Comment",
+    "url": "Link"
+  },
+  "form_filepicker_label_attachments": "Select attachments",
+  "request_new": {
+    "title": "Create request",
+    "budget_period": "Budget Period",
+    "please_choose": "Please choose",
+    "category_and_template": "Category & Template",
+    "no_template": "No template",
+    "success": "Request was created successfully",
+    "create_without_template": "Create without template",
+    "inspecting_until": "Inspection phase until",
+    "requesting_until": "Requesting phase until"
   }
 }
