@@ -5,6 +5,7 @@ import { isDev } from '../env'
 import en from './en.json'
 import de from './de.json'
 import es from './es.json'
+import ca from './ca.json'
 
 // dev langs
 import xx from './xx.json'
@@ -30,7 +31,7 @@ const fakeLang = l => {
 }
 window && (window.fakeLang = fakeLang)
 
-const LANGS = { en, de, es, ...DEV_LANGS }
+const LANGS = { en, de, es, ca, ...DEV_LANGS }
 const DEFAULT_LANG = 'de'
 
 const translate = key => {
