@@ -1,6 +1,6 @@
 [submodule "server/database"]
 	path = server/database
-	url = https://github.com/leihs/leihs_database
+	url = https://github.com/unstable7345/leihs_database.git
 [submodule "server/leihs-clj-shared"]
 	path = server/shared-clj
-	url = https://github.com/leihs/leihs-clj-shared.git
+	url = https://github.com/unstable7345/leihs-clj-shared.git
